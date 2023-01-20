@@ -1,15 +1,17 @@
 #include "header.h"
-#include "entidad.h"
 
 int main(){
 
+//vector de entidades
+vector<entidad> listaEntidades;
  int opcion;
    
    do{
-
+    
+    
     menu();
     cin >> opcion;
-    selectionOption(opcion);
+    selectionOption(opcion, listaEntidades);
 
    }while(opcion != 8);    
     
