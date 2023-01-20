@@ -67,10 +67,43 @@ void menu();
 bool automataStack(string cadena);
 
 
+//clase entidad
+class entidad{
+
+   //ATRIBUTOS
+   public:
+   vector<vector<string>> e;
+
+   string nombreEntidad; 
+
+   vector<string> tipoDatos;
+
+   int tamano;
+   
+   //METODOS
+   public:
+   entidad(vector<vector<string>> _e, string _nombre, vector<string> _tipoDatos, int _tamimpresion);
+   void imprimir(int t);
+   void setNombreEntidad(string nombreEntidad);
+   string getNombreEntidad();
+   vector<string> getTipoDatos();
+   vector<vector<string>> proyeccion();
+   vector<vector<string>> seleccion();
+   vector<vector<string>> productoCruz(entidad e2);
+   vector<vector<string>> unionEntidades(entidad e2);
+   vector<vector<string>> interseccionEntidades(entidad e2);
+   vector<vector<string>> diferenciaEntidades(entidad e2);
+
+
+
+};
+
+
 
 
 //funciones
 void menu();
 int menuTipoDatos();
-void selectionOption(int opcion);
+void selectionOption(int opcion, vector<entidad> &listaEntidades);
 bool flagisvalidType(string dato,string tipoDato);
+void imprimirVectores(vector<vector<string>> prueba);
